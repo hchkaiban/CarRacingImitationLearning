@@ -8,8 +8,7 @@ Actions:
     Break: real valued in [0, 1]
 
 Observations:
-   STATE_W = 96  * STATE_H = 96 * RGB Image  
-   see https://github.com/openai/gym/issues/524
+   STATE_W = 96  * STATE_H = 96 * 3 : RGB Image  
 
 Image obervations are the only input, the reward is just indicative.
 
@@ -18,14 +17,14 @@ Image obervations are the only input, the reward is just indicative.
 Global config
 
 - CarRacing_Play.py:
-Plays open AI gym CarRacing-v0 and stores observations, and actions
+Plays open AI gym CarRacing-v0 and stores observations and actions
 
 - CarRacing_Learn.py: 
 Trains Convolutional Neural Network (see Keras model.png) on saved data
 
 - CarRacing_Imitate.py: 
-Load tained model, wrangles observations, predict actions and simulate environment
+Load tained model, wrangles observations, predicts actions and simulate environment
 
 - Demo.mp4: 
 One of the decent results. 
-The algorithm revealed very sensitive to hyperprameters. The self-corrective steering action is interesting to watch.
+The algorithm revealed very sensitive to hyperprameters. The learned self-corrective steering action is interesting to watch.
