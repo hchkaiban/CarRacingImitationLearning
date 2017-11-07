@@ -13,6 +13,7 @@ from scipy import misc
 import CarConfig
 import matplotlib.pyplot as plt
 #import pydot_ng as pydot
+import os
 
 #########################
 #    Global Params      #
@@ -28,7 +29,7 @@ Temporal_Buffer = CarConfig.Temporal_Buffer
 #########################
 #       Params          #
 #########################
-NumberOfFolders = 2             #Number of data folders to laod
+NumberOfFolders = 8             #Number of data folders to laod
 
 #HYPER PARAMETERS
 StopLoss = 1.4
@@ -402,17 +403,24 @@ if __name__ == '__main__':
     
     try:
         model, model_hist, history_l = Build_Fit_Model(X, Y1, Y2)
-             
+        
+        if not os.path.exists(ModelsPath):
+            os.makedirs(ModelsPath)  
+        
         model.save(ModelsPath+"Model_weights_.h5", overwrite=True)
         print('Default model Model_weights_.h5 saved (check also callback one)')  
+        
         PlotLoss(history_l.losses)
         
     except KeyboardInterrupt:
         print('User interrupt. Save model: Y or N?')
         save = input()
         if save == 'Y' or save == 'y':
-            print('Model Model_weights.h5 saved')
+            if not os.path.exists(ModelsPath):
+                os.makedirs(ModelsPath)  
+            
             model.save(ModelsPath+"Model_weights.h5", overwrite=True)
+            print('Model Model_weights.h5 saved')
             
             PlotLoss(history_l.losses)
             

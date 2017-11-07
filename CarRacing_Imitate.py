@@ -14,7 +14,6 @@ Created on Sat Oct 21 11:55:38 2017
 
 Simulation after CarRacing_Play.py and CarRacing_Learn.py
 """      
-
 #To generate video:
 #ffmpeg -f image2 -r 6 -i 'Img%01d.png' output.mp4
 
