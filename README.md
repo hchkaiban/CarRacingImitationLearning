@@ -26,5 +26,6 @@ Trains Convolutional Neural Network (see Keras model.png) on saved data
 Load tained model, wrangles observations, predicts actions and simulate environment
 
 - Demo.mp4: 
-One of the decent results. 
-The algorithm revealed very sensitive to hyperprameters. The throttle was clipped and brake not used for this demo as the car would be to slow (however, see final solution with reinforcement learning: https://github.com/hchkaiban/CarRacingRL/tree/master/RLImitation). The learned self-corrective steering action is interesting to watch.
+One of the decent results. The learned self-corrective steering action is interesting to watch.
+
+The algorithm revealed very sensitive to hyperprameters. The throttle was clipped and brake not used for this demo as the car would be to slow (however, see final solution with reinforcement learning: https://github.com/hchkaiban/CarRacingRL/tree/master/RLImitation). 
