@@ -28,6 +28,6 @@ Load tained model, wrangles observations, predicts actions and simulate environm
 
 - Demo.mp4: 
 One of the decent results. The learned self-corrective steering action is interesting to watch.
-![IL_OnTrainingTrack](https://github.com/hchkaiban/CarRacingImitationLearning/blob/master/Demo.mp4)
+![Demo_ImLearn_OnTrainingTrack](https://github.com/hchkaiban/CarRacingImitationLearning/blob/master/Demo.mp4)
 
 The algorithm revealed very sensitive to hyperprameters. The throttle was clipped and brake not used for this demo as the car would be to slow (however, see final solution with reinforcement learning: https://github.com/hchkaiban/CarRacingRL/tree/master/RLImitation). 
